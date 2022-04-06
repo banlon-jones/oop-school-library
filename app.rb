@@ -32,7 +32,7 @@ class App
 
   def list_all_people
     puts 'no people found! Add a person' if @books.empty?
-    @people.each { |person| puts "#{person.id} - #{person.name} - Age: #{person.age}"  }
+    @people.each { |person| puts "#{person.id} - #{person.name} - Age: #{person.age}" }
   end
 
   def create_person
@@ -116,6 +116,8 @@ class App
     print 'see person rentals enter the person ID: '
     id = gets.chomp.to_i
     puts 'Rented Books:'
-    @rentals.each { |rental| puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}" if rental.person.id == id }
+    @rentals.each do |rental|
+      puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}" if rental.person.id == id
+    end
   end
 end
