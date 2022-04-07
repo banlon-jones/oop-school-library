@@ -52,10 +52,10 @@ class App
     puts 'create student '
     print 'enter student name: '
     name = gets.chomp
-    print 'enter student age'
+    print 'enter student age: '
     age = gets.chomp
     age.to_i
-    puts 'Has parental permission'
+    print 'Has parental permission [y/n]: '
     permission = gets.chomp.to_s.upcase
     case permission
     when 'Y'
@@ -75,7 +75,7 @@ class App
     puts 'create a teacher '
     print 'enter teacher\'s name: '
     name = gets.chomp
-    print 'enter teacher age'
+    print 'enter teacher age: '
     age = gets.chomp
     age.to_i
     puts 'specialization'
@@ -115,7 +115,7 @@ class App
   def list_all_rentals
     print 'see person rentals enter the person ID: '
     id = gets.chomp.to_i
-    puts 'Rented Books:'
+    puts 'Rented Books: '
     @rentals.each do |rental|
       puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}" if rental.person.id == id
     end
