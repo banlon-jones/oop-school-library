@@ -117,7 +117,7 @@ class App
     id = gets.chomp.to_i
     puts 'Rented Books: '
     @rentals.each do |rental|
-      puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}" if rental.person.id == id
+      puts "Date: #{rental.date}, Book '#{rental.book.title}' author #{rental.book.author}" if rental.person.id == id
     end
   end
 end
