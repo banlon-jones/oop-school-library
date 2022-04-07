@@ -20,7 +20,7 @@ Run the following commands to clone and run it.
 
 `bundle install`
 ### running the program
-- Open `irb` terminal to execute the code
+- In your terminal execute the command `ruby main.rb` to run the application
 
 
 ## Authors
